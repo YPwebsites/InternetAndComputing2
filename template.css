@@ -1,6 +1,6 @@
 /*
-Electritians Template - (5/29/2013)
-Design by Marc Benejan, Development by Conor Kelly
+Internet and Computing Template - (5/30/2013)
+Design by Anthea Sefa-Boakye, Development by Conor Kelly
 ck7630@yp.com
 
 YP Horizontal Framework A v5.1 - 4-19-2013
@@ -13,15 +13,18 @@ changed logo, slogan, cta, phone css 5-09-2013
 */
 
 @import url("gfx/wp-skeleton.css"); 
+
 @font-face {
-	font-family: "Avenir Regular";
-	src: url("gfx/aer____.ttf"),
-		 url("aero___.ttf");
+	font-family: "Myriad Pro";
+	src: url("gfx/MyriadPro-Regular.otf"),
+		 url("gfx/MyriadPro-It.otf"),
+		 url("gfx/MyriadPro-Semibold.otf"),
+		 url("gfx/MyriadPro-SemiboldIt.otf");
 }
 @font-face {
-	font-family: "Avenir Black";
-	src: url("gfx/aebl___.ttf"),
-		 url("gfx/aeblo__.ttf");
+	font-family: "Myriad Pro Bold";
+	src: url("gfx/MyriadPro-Bold.otf"),
+		 url("gfx/MyriadPro-BoldIt.otf");
 }
 
 
@@ -29,21 +32,35 @@ header, footer, nav, section, article {display: block;}
 
 body {
 	margin: 0;
-	color: #333333;
+	color: #707070;
 	font-size : 100%;
-	line-height:150%;
+	line-height:160%;
 	font-family:Verdana, Geneva, sans-serif; /* Set default font styles here */
 }
 	body { 
 		/* Set background image POSITION and REPEAT here! */
-		
+		background-color: #2da7fe;
 	}
 	div#body2 {
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 19%, rgba(0,0,0,.36) 69%, rgba(0,0,0,.36) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(19%,rgba(0,0,0,0)), color-stop(69%,rgba(0,0,0,.36)), color-stop(100%,rgba(0,0,0,.36))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,.36) 69%,rgba(0,0,0,.36) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,.36) 69%,rgba(0,0,0,.36) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,.36) 69%,rgba(0,0,0,.36) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 19%,rgba(0,0,0,.36) 69%,rgba(0,0,0,.36)) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#A3000000',GradientType=0 ); /* IE6-8 */
+
+		
 		
 	}
 .skinBg { 
 
-}		
+}	
+#content {
+	line-height: 1.6;
+}	
 
 /* 2.HEADINGS */
 
@@ -52,10 +69,8 @@ h2, h2 span, h2 font span, h2 div,
 h3, h3 span, h3 font span, h3 div {
 	margin-bottom : 8px;
 	line-height: 120%;
-	font-family: "Avenir Black", Arial, Helvetica, sans-serif;
-	color: #191919;
-	text-shadow: 1px 1px 0px rgba(255,255,255,0.75);
-	-webkit-text-shadow: 1px 1px 0px rgba(255,255,255,0.75);
+	font-family: "Myriad Pro Bold", Arial, Helvetica, sans-serif;
+	color: #3a74b8;
 	font-weight: bold;
 }
 h4, h4 span, h4 font span, h4 div,
@@ -94,13 +109,13 @@ ul,
 dl, 
 address { 
 	margin-bottom : 16px; 
-	font-size : 14px; 
-	color: #333333;
-	line-height:150%;
+	font-size : 11px; 
+	color: #707070;
+	line-height:160%;
 }
 /* add text styling to divs as Websplanet loves to wrap text in divs throughout the platform, just don't include a margin */
 div {
-	font-size: 14px;
+	font-size: 11px;
 }
 	
 	/* 3a. Websplanet widget typography 
@@ -119,7 +134,7 @@ div {
 	div#containingBlock, 
 	div.calc-input-container, 
 	div.calc-input-container span {
-		 color: #333333; /* replace with theme font color */
+		 color: #707070; /* replace with theme font color */
 	}
 	
 	/* If the theme font color is a lighter color (for themes with darker backgrounds) those colors will get lost when they are within Accordion, Tabs, or Spotlight widgets which, by default, have a white background. Define a theme "dark" text color for these areas using the classes below. */
@@ -149,7 +164,7 @@ div {
 	div.diy-f-spot div#containingBlock, 
 	div.diy-f-spot div.calc-input-container, 
 	div.diy-f-spot div.calc-input-container span {
-		color: #333333; /* Replace with theme specific "dark" text color */
+		color: #707070; /* Replace with theme specific "dark" text color */
 	}	
 
 ul, 
@@ -167,8 +182,8 @@ ol {
 ul li , 
 ol li  { 
 	margin : 0;
-	font-size : 14px; 
-	line-height:150%;
+	font-size : 11px; 
+	line-height:160%;
 }
 dl, 
 dd { 
@@ -182,14 +197,14 @@ blockquote  {
 	margin : 0 18px 1.5em 18px; 
 	padding-left : 18px;
 	padding-right : 18px; 
-	border-left : 1px solid #333333;
-	border-right : 1px solid #333333;
+	border-left : 1px solid #F2AD4C;
+	border-right : 1px solid #F2AD4C;
 }
 /* font styling here */
 blockquote,
 blockquote div,
 blockquote p {
-	font: 24px/1.2 "Avenir Black", Arial, Helvetica, sans-serif;
+	font: 24px/1.2 "Myriad Pro Bold", Arial, Helvetica, sans-serif;
 	font-style : italic; 
 	color: #999999;
 }
@@ -236,21 +251,20 @@ hr {
 a, 
 a:visited {
 	outline : none;
-	color : #e88100; 
+	color : #526ba9; 
 	text-decoration : none;
-	font-weight: bold;
 }
 
 a:hover { 
 	outline : none;
-	color : #333333; /* hex code can be used here too */
+	color : #f2ad4c; /* hex code can be used here too */
 	text-decoration : none;
 	 
 }
 a:active, 
 a:focus { 
 	outline : none;
-	color : #333333; /* hex code can be used here too */
+	color : #f2ad4c; /* hex code can be used here too */
 	text-decoration : underline;
 }
 
@@ -278,30 +292,28 @@ p.m-logo {
 	position:relative;
 	line-height: 0;
 }
-#wrapper-header { }
-#logo-wrapper {
-	
+#wrapper-header { 
+	z-index: 399;
 }
+#logo-wrapper { }
 #nav-wrapper {
 	z-index: 400;
 }
 #headerImage-wrapper {
-	z-index: 15;
+	z-index: 15; 
+	background-color: rgba(255,255,255,.36);
+	background-color: transparent\9;
+	background-image: url(gfx/headerImageWrapperBG-IE.png)\9;
 }
 #wrapper-content { 
-	
+    z-index: 15;	
 }
-#wrapper-content div.sk-container {
-	
-}
+#wrapper-content div.sk-container { }
 #wrapper-footer {
-	background-image: url("gfx/footerBG.jpg");
 	padding: 10px 0px;
-	
 } 
 #wrapper-copyright {
 	display:inline-block;
-	background: transparent url("gfx/copyrightBG.jpg") repeat top left scroll;
 	padding: 10px 0px;
 }
 #wrapper-footerData {
@@ -312,93 +324,131 @@ p.m-logo {
 #content {
 	padding:15px 0px; 
 	min-height:100px;
-	line-height: 1.5;
+	line-height: 0;
+	background-color: #fff;
+	border: 2px solid #bfbfbf;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 936px;
 }
+@media only screen and (max-width: 959px) {
+	#content {
+		width: 744px;
+	}
+}
+@media only screen and (max-width: 747px) {
+	#content {
+		width: 416px;
+		margin-top: 15px;
+	}
+}
+@media only screen and (max-width: 479px) {
+	#content {
+		width: 296px;
+	}
+}
+
 
 /* logo */
 #logo-slogan {
-	padding: 20px 0px 20px;
+	padding: 0 0 15px;
 	text-align:left;
-
 }
 
 a.logo, a.logo div {
-	font-family: "Avenir Black", Arial, Helvetica, sans-serif;
+	font-family: "Myriad Pro Bold", Arial, Helvetica, sans-serif;
 	text-decoration:none;
-	color:#1a1e2b;
-	font-size: 40px;
+	color:#ffffff;
+	font-size: 44px;
 	line-height: 1;
-	text-transform:uppercase;
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-webkit-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-moz-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+	text-transform:capitalize;
+}
+a.logo {
+	padding-left: 24px;	
+	line-height: 0;
 }
 /* positioning and box method styling */
-.slogan {  }
+#slogan-slogan {
+	bottom: 0;	
+	padding-bottom: 15px;
+	position: absolute;
+	text-align: right;
+}
+.slogan {  
+}
 /* font styling */
 .slogan, .slogan div { 
-	font-family: "Avenir Regular", Arial, Helvetica, sans-serif;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-style: italic;
 	font-size: 24px;
 	line-height: 1;
 	text-transform: capitalize;
-	color:#242424;
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-webkit-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-moz-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+	color:#ffffff;
 }
 	
 /* Phone */
 /* positioning and box model styling go here */
 #phone-cta {
-	padding: 20px 0px 20px;
-	text-align:right;
-	
-	
+	padding: 5px 15px 5px;
+	text-align:center;
+	max-width: 50%;
+	position: absolute;
+	top: 3px;
+	left: 24px;
+	background-color: #f2ad4c;
+	z-index: 399;
 }
 /* font styling goes here */
 #phone-cta div,
 #m-phone-cta div {
-	font-family: "Avenir Regular", Arial, Helvetica, sans-serif;
+	font-family: "Calibri", "Myriad Pro", Arial, Helvetica, sans-serif;
 	line-height: 1;
 	text-transform:captialize;
-	color:#242424;
+	color:#ffffff;
 	font-size: 24px;
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-webkit-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-moz-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+	font-weight: bold;
+	display: inline;
 }
 #phone-cta div.phone-number,
 #m-phone-cta div.phone-number {
-	font-size: 36px;
-	font-family: "Avenir Black", Arial, Helvetica, sans-serif;
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-webkit-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-moz-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+
 }
 #m-phone-cta {
-	background: #E88100 url("gfx/footerBG.jpg") repeat top left scroll;
-	border: 1px solid #666;
-	padding: 12px 0;
+	background: #F2AD4C;
+	border: 1px solid #BFBFBF;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 5px 0;
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 2px 2px 3px rgba(0,0,0,.5);
 	text-align:center;
 	margin: 10px 0;
 	display:none;
-	
 }
 #m-phone-cta div {
-	color: #242424;	
-	
+	font: 30px/1.1 "Myriad Pro", Arial, Helvetica, sans-serif;
+	color: #fff;
 }
 #m-phone-cta:hover,
 #m-phone-cta:active {
-	background: #333333 url("gfx/copyrightBG.jpg") repeat top left scroll;
+	background: #BFBFBF;
+	border-color: #F2AD4C;
+	box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
 }
 #m-phone-cta:hover div,
 #m-phone-cta:active div,
 #m-phone-cta:focus div {
-	color: #ffffff;
-	text-shadow: -1px -1px 1px #000;
-	-webkit-text-shadow: -1px -1px 1px #000;
-	-moz-text-shadow: -1px -1px 1px #000;
+	color: #ffffff;	
+	text-align:center;
+	text-decoration: none;
+	text-shadow: 2px 2px 1px rgba(0,0,0,.25);
+	-webkit-text-shadow: 2px 2px 1px rgba(0,0,0,.25);
+	-moz-text-shadow: 2px 2px 1px rgba(0,0,0,.25);
 }
 #m-phone-cta a,
 #m-phone-cta a:hover,
@@ -408,12 +458,16 @@ a.logo, a.logo div {
 }
 /* header image */
 #header-image-container {
-	margin-top: 10px; 
+	margin: 0px; 
 	position:relative;
 	line-height: 0;
-	padding: 5px;
-	border: 1px solid #d1cfcf;
+	padding: 0px;
+	border: 3px solid #e7e7e7;
 	background-color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	overflow: hidden;
 }
 #header-image-container img {
 		
@@ -425,7 +479,7 @@ div#header-image-wrapper-1 {
 	
 } 
 img#siteMainDynHeaderImage1 { 
-	width:928px; 
+	width:100%; 
 	height:auto;
 	margin: 0px;
 }
@@ -435,7 +489,7 @@ img#siteMainDynHeaderImage1 {
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 	img#siteMainDynHeaderImage1 {
-		width: 736px;	
+			
 	}
 }
 /* All Mobile Sizes (devices and browser) */
@@ -456,7 +510,7 @@ img#siteMainDynHeaderImage1 {
 		border-top: none;	
 	}
 	img#siteMainDynHeaderImage1 {
-		width: 408px;	
+			
 	}
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -478,16 +532,17 @@ img#siteMainDynHeaderImage1 {
 		font-size: 18px;	
 	}
 	img#siteMainDynHeaderImage1 {
-		width: 288px;	
+			
 	}
 }	
 
 /* footer */
 #footer-area {
 	padding:10px 0px;
+	text-align: right;
 }
 #footer-area, #footer-area a {
-	color: #333333;	
+	color: #ffffff;	
 }
 span.footerText {
 	display: none;	
@@ -502,8 +557,6 @@ ul#nav {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
-	border-left: 1px solid #585858;
-	border-right: 1px solid #3c3c3c;
 }
 /* start first level nav items */
 	ul#nav li {
@@ -513,32 +566,35 @@ ul#nav {
 		list-style-image: none;
 	}
 	ul#nav > li {
-		border-left: 1px solid #3c3c3c;
-		border-right: 1px solid #585858;
+		margin: 12px 0;
 	}
 	ul#nav li.last { }
 	ul#nav li.first { }
-	ul#nav li a {
-		font-size: 12px;
+	ul#nav li a {	
+		font-family: "Calibri", Verdana, Geneva, sans-serif;
+		font-size: 14px;
 		text-decoration: none;
-		line-height:40px; /* line height is better than top and bottom padding */
+		line-height:25px; /* line height is better than top and bottom padding */
 		display: block;
 		text-align: left;
 		padding: 0px 20px;
 		white-space: nowrap;
 		text-transform: uppercase;
 		color: #fff;
-		font-weight: normal;
+		font-weight: bold;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 	}
 /* yes, you can combine the bottom two styles if you would like or need to */	
 	ul#nav li.current,
 	ul#nav li:hover {
-		background: transparent url("gfx/liCurrentBG.png") top left repeat-x scroll;	
+		
 	}
-	ul#nav li.current a,
+	ul#nav li.current > a,
 	ul#nav li a:hover {
-		color: #E88100;
-		background: transparent url("gfx/liCurrentAbg.png") top right no-repeat scroll;
+		
+		background-color: #f2ad4c;
 	}
 	ul#nav li.first a { }
 	ul#nav li.last a { }
@@ -551,25 +607,23 @@ ul#nav {
 			left: -999em; /* using left instead of display to hide menus because display: none isnt read by screen readers */
 			margin:0px;
 			padding:0px;
-			background:#555555 url("gfx/navBG.jpg") repeat top left scroll;
-			border-left: 1px solid #585858;
-			border-right: 1px solid #3c3c3c;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			background-color: #f2ad4c;
 		}
 		ul#nav li ul li {
-			border-bottom: 1px solid #3c3c3c;
-			border-top: 1px solid #585858;	
+			
 		}
 		ul#nav li ul li a, 
 		ul#nav li.current ul li a { /* second level dropdown buttons */
 			width:200px;
-			background: none;
-			line-height:30px;
-			color:#fff;
+			margin: 1px 0;
 		}
 		ul#nav li ul li a:hover, 
-		ul#nav li.current ul li a:hover { /* second level dropdown button hover state */	
-			color: #E88100;
-			background: transparent url("gfx/liCurrentAbg.png") top right no-repeat scroll;
+		ul#nav li ul li.current > a { /* second level dropdown button hover state */	
+			background-color: #ffffff;
+			color: #f2ad4c;
 		}
 /* first and lasts in drop down */
 		ul#nav li ul li.first a, 
@@ -586,15 +640,14 @@ ul#nav {
 			ul#nav li.current ul li ul li a { /* third level dropdown buttons */
 				width:200px;
 
-				line-height:30px;
-				color:#fff;
+				
 			}
 			ul#nav li ul li ul li a:hover, 
 			ul#nav li.current ul li ul li a:hover,
 			ul#nav li ul li.current > a,
 			ul#nav li ul li ul li.current > a { /* third level dropdown button hover state */						
 
-				color:#E88100;
+				
 			}
 /* first and lasts in drop down */
 			ul#nav li ul li ul li.first a, 
@@ -624,9 +677,7 @@ ul#nav {
 
 /* Navigation  media queries */
 @media only screen and (max-width: 959px) {
-	ul#nav {
-		width: 747px;	
-	}
+	
 	
 }
 @media only screen and (max-width: 767px) {
@@ -681,9 +732,7 @@ ul#nav {
 		margin: 0;
 		padding: 0;
 		width:100%;
-		background: #555555 url("gfx/navBG.jpg") repeat top left scroll;
-		box-shadow: 0px 2px 4px rgba(000,000,000,0.5);
-		-webkit-box-shadow: 0px 2px 4px rgba(000,000,000,0.5);
+		background-color: #f2ad4c;
 	}
 /* start first level nav items */
 	#m-menu ul#nav li {
@@ -707,7 +756,7 @@ ul#nav {
 		border-right: 0px;
 	}	
 	#m-menu ul#nav li a {
-		font-size: 14px;
+		font-size: 16px;
 		text-decoration: none;
 		line-height:44px; /* line height is better than top and bottom padding */
 		display: block;
@@ -715,16 +764,13 @@ ul#nav {
 		padding: 0px 15px;
 		white-space: nowrap;
 		text-transform: uppercase;
-		border-bottom: 1px solid #3c3c3c;
-		border-top: 1px solid #585858;
-		border-left: 0px;
-		border-right: 0px;
-		background-image: none;
+		margin: 2px 0;
 	}	
 /* yes, you can combine the bottom two styles if you would like or need to */	
-	#m-menu ul#nav li.current a,
+	#m-menu ul#nav li.current > a,
 	#m-menu ul#nav li a:hover {
-		background: transparent url("gfx/liCurrentBG.png") top left repeat-x scroll;
+		background-color: #fff;
+		color: #f2ad4c;
 	}
 /* end first level nav items */		
 	
@@ -740,23 +786,19 @@ ul#nav {
 		#m-menu ul#nav li ul li a, 
 		#m-menu ul#nav li.current ul li a { /* second level dropdown buttons */
 			width:auto;
-			background: none;
 			line-height:30px;
-			
 			padding: 0px 15px 0px 30px;
 			text-transform: capitalize;
-			font-size: 12px;
+			font-size: 16px;
 		}
 		#m-menu ul#nav li ul li a:hover, 
 		#m-menu ul#nav li.current ul li a:hover,
 		#m-menu ul#nav li ul li a:active, 
 		#m-menu ul#nav li.current ul li a:active { /* second level dropdown button hover and active states */
-			background: transparent url("gfx/liCurrentBG.png") top left repeat-x scroll;
-			color:#E88100;
+			
 		}
 		#m-menu ul#nav li ul li.current a {
-			background: transparent url("gfx/liCurrentBG.png") top left repeat-x scroll;
-			color:#E88100;
+			
 		}
 /* end second level nav items */	
 
@@ -791,25 +833,29 @@ ul#mirror-menu-module {
 	clear: both;
 	position: relative; 
 	z-index: 0; 
-	font-size:12px;
+	font-size:11px;
+	line-height: 18px;
 	text-align:center;
 	font-weight:normal;
-	display: inline-block;
+	display: block;
 }
 ul#mirror-menu-module li {
-/*	display: inline;  remove and add float if you want the text left justified */
-	float: left;/**/
+	display: inline; /* remove and add float if you want the text left justified */
+/*	float: left;*/
 	padding: 0px 25px 0 0;
 	list-style: none;
 	text-align: center;
 }
 ul#mirror-menu-module a {
-	color:#000000;
+	color:#BFBFBF\9;
+	color: rgba(255,255,255,.54);
 	text-decoration:none; 
 	font-weight: normal;
 }
-ul#mirror-menu-module a:hover {
-	color:#000000;
+ul#mirror-menu-module a:hover,
+ul#mirror-menu-module a:active {
+	color:#BFBFBF\9;
+	color: rgba(255,255,255,.54);
 	text-decoration:underline;
 }
 
@@ -821,12 +867,12 @@ div#copyright {
 	text-align: left;
 	font-size: 10px;
 	line-height: 18px;
-	color:#979696;
+	color:#e2e2e2;
 	width:100%;
 	font: Arial, Helvetica, sans-serif;
 }
 div#copyright a{
-	color: black;
+	color: #fff;
 }
 div#copyright br {
 	display:none;
@@ -892,7 +938,7 @@ input[type="password"]:hover,
 input[type="email"]:hover, 
 textarea:hover,
 select:hover {
-	border-color: #E88100;
+	border-color: #F2AD4C;
 }
  
 select {}
@@ -1023,20 +1069,21 @@ div.unit-calc li.unit-menu ul.unit-type li a:hover {
 #FAQ_category_list > li > a,
 #FAQ_category_list > li > a:visited, 
 .jobs-apply a {	
-	font: 30px/1.2 "Avenir Black", Arial, Helvetica, sans-serif;
+	font: 30px/1.1 "Myriad Pro", Arial, Helvetica, sans-serif;
 	width:auto; 
 	height:auto; 
 	text-align:center;  
 	z-index:1001;
-	background: #E88100 url("gfx/footerBG.jpg") repeat top left scroll;
-	border: 1px solid #666;
-	border-radius: 0;
-	-webkit-border-radius: 0;
-	padding:  10px;
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-webkit-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	-moz-text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-	color: #333;
+	background: #F2AD4C;
+	border: 1px solid #BFBFBF;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding:  5px;
+	color: #fff;
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	-moz-box-shadow: 2px 2px 3px rgba(0,0,0,.5);
 }
 
 div.widget-button:hover,
@@ -1048,16 +1095,20 @@ div.widget-button:hover,
 .jobs-apply a:focus {
 	cursor:pointer;
 	filter: none;
-	background: #333333 url("gfx/copyrightBG.jpg") repeat top left scroll;
+	background: #BFBFBF;
 	color: #ffffff;
-	text-shadow: -1px -1px 1px #000;
-	-webkit-text-shadow: -1px -1px 1px #000;
-	-moz-text-shadow: -1px -1px 1px #000;
 	text-decoration: none;
+	border-color: #F2AD4C;
+	box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.5);
+	text-shadow: 2px 2px 1px rgba(0,0,0,.25);
+	-webkit-text-shadow: 2px 2px 1px rgba(0,0,0,.25);
+	-moz-text-shadow: 2px 2px 1px rgba(0,0,0,.25);
 }
 .astrix, .required:after {
 	/* *********** THEME COLOR *********** */
-	color: #E88100;
+	color: #F2AD4C;
 }
 	
 
@@ -1555,7 +1606,7 @@ div#jobs-module ul {
 	font-family: Arial, Helvetica, sans-serif; /* replace with theme fonts */
 	font-size: 24px;
 	padding-left: 0px;
-	color: #333333; /* ********** replace with theme color ********** */
+	color: #3A74B8; /* ********** replace with theme color ********** */
 	filter: none;
 }
 .jobs-title a:hover,
@@ -1564,17 +1615,26 @@ div#jobs-module ul {
 	text-decoration: underline;
 }
 #jobs-module li .jobs-title a {
-	color:	#333333; /* ********** replace with theme color ********** */
+	color:	#3A74B8; /* ********** replace with theme color ********** */
 }
 
 /* --------------- end Websplanet module fixes --------------- */
 
 /* --------------- Default Site Callout Classes --------------- */
+
 div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper,
 div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper {
-	width:45% !important;
+	
 	float:left !important;
 	margin-right: 0 !important;
+}
+div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-image,
+div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper.free-image {
+	width:28% !important;
+}
+div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-text,
+div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper.free-text {
+	width:64% !important;
 }
 div.diy-f-spot.callout1 p.figcaption,
 div.diy-f-spot.callout2 p.figcaption {
@@ -1584,6 +1644,7 @@ div.diy-f-spot.callout1,
 div.diy-f-spot.callout2 {
 	margin-left: 0 !important;	
 	margin-right: 0 !important;
+	border-bottom: 1px solid #e7e5e5;
 }
 div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper h1,
 div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper h2,
@@ -1597,7 +1658,7 @@ div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper h3,
 div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper h4,
 div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper h5,
 div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper h6 {
-	color: #E88100;
+	color: #F2AD4C;
 }
 div.diy-f-spot.callout1 div.image_wrapper,
 div.diy-f-spot.callout2 div.image_wrapper {
@@ -1608,6 +1669,12 @@ div.diy-f-spot.callout2 div.image_wrapper {
 	-webkit-box-shadow: 0 0 13px 0px rgba(0,0,0,.4);
 	border: 1px solid #bbb\9;
 }
+@media screen and (max-width: 959px) {
+	div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-text,
+	div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper.free-text {
+		width:63% !important;
+	}
+}
 @media screen and (max-width: 767px) {
 	div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper,
 	div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper {
@@ -1615,6 +1682,10 @@ div.diy-f-spot.callout2 div.image_wrapper {
 		float:left !important;
 		margin-right: 15px !important;
 		margin-bottom: 0 !important;
+	}
+	div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-text,
+	div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper.free-text {
+		width:90% !important;
 	}
 }
 @media screen and (max-width: 479px) {
@@ -1632,13 +1703,13 @@ div#close_map {
     text-align: right;
     padding-right: 10px;
     font-weight: bold;
-    color: #E88100;
+    color: #F2AD4C;
 }
 .file-widget-btn { display: block; }
 #FAQ_category_list li div a, #FAQ_category_list li div a:hover {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
-    color: #E88100; /* ********** replace with theme color ********** */
+    color: #F2AD4C; /* ********** replace with theme color ********** */
     display: inline;
     padding: 0;
 }

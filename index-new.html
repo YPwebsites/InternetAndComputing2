@@ -93,13 +93,12 @@ $(document).ready(function(){
                 <div class="sk-container">
                     <div id="logo-slogan" class="ten columns">
                         <!-- logo tag --> <a class="logo" href="#"><div>Company Name</div></a> <!-- logo tag -->
-                        <div class="slogan">Your Slogan Goes Here</div>
+                        
                     </div><!-- end logo -->
-                    
-                    <div id="phone-cta" class="six columns">
-                        <div class="tagline2">Call Now</div>
-                        <div class="phone-number">404-555-5555</div>
+                    <div id="slogan-slogan" class="six columns">
+                        <div class="slogan">Your Slogan Goes Here</div>
                     </div><!-- end phone -->
+                    
                     <!-- begin mobile phone # -->
                     <div id="m-phone-cta" class="six columns">
                         <a href="tel:{PHONE}" class="phone-header-button">
@@ -116,6 +115,10 @@ $(document).ready(function(){
                 <div class="sk-container">
                     <!-- start header image -->
                     <div class="sixteen columns">
+                    	<div id="phone-cta" class="six columns">
+                            <div class="tagline2">Call Now</div>
+                            <div class="phone-number">404-555-5555</div>
+                        </div><!-- end phone -->
                         <div id="header-image-container">
                             <img id="siteMainDynHeaderImage1" src="gfx/header_image_1.jpg" >
                         </div> 
@@ -180,7 +183,7 @@ $(document).ready(function(){
                                 <div class="widget-body">
                                     <div style="max-width:100%; float:left;" class="freetext-image resize-wrapper">
                                         <div class="image_wrapper">
-                                            <img alt="" style="width:100%;" src="gfx/calloutImg1.png">
+                                            <img alt="" style="width:100%;" src="gfx/calloutImg1b.png">
                                         </div>
                                         <p class="figcaption"></p>
                                     </div>
@@ -211,7 +214,7 @@ $(document).ready(function(){
                                 <div class="widget-body">
                                     <div style="max-width:100%; float:left;;" class="freetext-image resize-wrapper">
                                         <div class="image_wrapper">
-                                            <img alt="" style="width:100%;" src="gfx/calloutImg2.png">
+                                            <img alt="" style="width:100%;" src="gfx/calloutImg2b.png">
                                         </div>
                                         <p class="figcaption"></p>
                                     </div>
@@ -239,7 +242,7 @@ $(document).ready(function(){
             <!-- end Callouts -->
             <!-- start element examples; NOTE: containing div is for margins that would be rendered by .widget-wrapper -->
             <div id="widetExamples">
-                <div class="eight columns alpha">
+                <div class="eight columns alpha omega">
                     <!-- Header elements -->
                     <h1>This is a header 1</h1>
                     <h2>This is a header 2</h2>
@@ -248,18 +251,18 @@ $(document).ready(function(){
                     <h5>This is a header 5</h5>
                     <h6>This is a header 5</h6>
                 </div>
-                <div class="eight columns omega">
+                <div class="eight columns omega alpha">
                     <blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</blockquote>
                 </div>
                 <div class="clear"></div>
                 <hr>
-                <div class="twelve columns alpha">
+                <div class="twelve columns alpha omega">
                     <!-- Paragraph and link elements -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem sapien, venenatis quis dictum nec, ultricies in odio. Sed eget lacus sem, id tincidunt purus. Nam rhoncus, enim luctus gravida viverra, nisl eros malesuada nunc, ac ultricies metus velit
                         vel lectus. <a href="#">Curabitur lobortis</a> viverra elementum. Duis sit amet nisi ut lacus posuere molestie et ac odio.</p>
                     <p>Sed mauris magna, consectetur ut mattis vitae, volutpat quis diam. Nulla velit sapien, aliquet sit amet vehicula sit amet, ornare eu orci. Suspendisse nec erat risus, mollis tempus orci. Suspendisse tempus tristique consectetur.</p>
                     <!-- UL/OL elements -->
-                    <div class="six columns alpha">
+                    <div class="six columns alpha omega">
                         <ul>
                             <li>Listed Item</li>
                             <li>Listed Item</li>
@@ -269,7 +272,7 @@ $(document).ready(function(){
                             <li>Listed Item</li>
                         </ul>
                     </div>
-                    <div class="six columns omega">
+                    <div class="six columns omega alpha">
                         <ol>
                             <li>Numbered list</li>
                             <li>Numbered list</li>
@@ -282,7 +285,7 @@ $(document).ready(function(){
                     <!-- Widget Buttons are very important to style out -->
                     <div class="widget-button">Widget Button</div>
                 </div>
-                <div class="four columns omega">
+                <div class="four columns omega alpha">
                     <!-- Form Elements -->
                     <form>
                         <ul>
@@ -331,13 +334,7 @@ $(document).ready(function(){
     </div><!-- end sk-container -->
 </div>
 <!-- end div#wrapper-content -->
-<div id="wrapper-footerData">
-	<div class="sk-container">
-		<div id="footer-area" class="sixteen columns">
-         	{FOOTER_DATA}
-   		</div> 
-    </div>
-</div>
+
 <!-- start div#wrapper-footer -->
 <div id="wrapper-footer" class="skinBg">
     <footer>
@@ -352,9 +349,11 @@ $(document).ready(function(){
                 </ul>
             </div>
         </nav>  
+        <div id="footer-area" class="sixteen columns">
+         	{FOOTER_DATA}
+   		</div>
         <!-- end mirrior menu module -->  
-    </footer> 
-    </div>   
+    </footer>   
 </div>
 <!-- end div#wrapper-footer -->
 
