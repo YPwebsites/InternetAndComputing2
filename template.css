@@ -58,9 +58,6 @@ body {
 .skinBg { 
 
 }	
-#content {
-	line-height: 1.6;
-}	
 
 /* 2.HEADINGS */
 
@@ -100,7 +97,9 @@ h5, h5 div, h5 span, h5 font span {
 h6, h6 div, h6 span, h6 font span { 
 	font-size : 11px; 
 }
-
+.page-title {
+	margin-left: 15px;
+}
 /* 3.TYPOGRAPHY */
 
 p, 
@@ -303,7 +302,7 @@ p.m-logo {
 	z-index: 15; 
 	background-color: rgba(255,255,255,.36);
 	background-color: transparent\9;
-	background-image: url(gfx/headerImageWrapperBG-IE.png)\9;
+	background-image: url('gfx/headerImageWrapperBG-IE.png')\9;
 }
 #wrapper-content { 
     z-index: 15;	
@@ -331,13 +330,14 @@ p.m-logo {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	width: 936px;
+	line-height: 1.6;
 }
 @media only screen and (max-width: 959px) {
 	#content {
 		width: 744px;
 	}
 }
-@media only screen and (max-width: 747px) {
+@media only screen and (max-width: 767px) {
 	#content {
 		width: 416px;
 		margin-top: 15px;
@@ -366,7 +366,7 @@ a.logo, a.logo div {
 }
 a.logo {
 	padding-left: 24px;	
-	line-height: 0;
+
 }
 /* positioning and box method styling */
 #slogan-slogan {
@@ -566,7 +566,7 @@ ul#nav {
 		list-style-image: none;
 	}
 	ul#nav > li {
-		margin: 12px 0;
+		margin: 12px 2px 12px 0;
 	}
 	ul#nav li.last { }
 	ul#nav li.first { }
@@ -1664,10 +1664,10 @@ div.diy-f-spot.callout1 div.image_wrapper,
 div.diy-f-spot.callout2 div.image_wrapper {
 	/* ********** add strokes and other styles here and not on <img> ********** */
 	line-height: 0;	
-	border: 4px solid #fff;
+/*	border: 4px solid #fff;
 	box-shadow: 0 0 13px 0px rgba(0,0,0,.4);
 	-webkit-box-shadow: 0 0 13px 0px rgba(0,0,0,.4);
-	border: 1px solid #bbb\9;
+	border: 1px solid #bbb\9; */
 }
 @media screen and (max-width: 959px) {
 	div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-text,
@@ -1686,6 +1686,10 @@ div.diy-f-spot.callout2 div.image_wrapper {
 	div.diy-f-spot.callout1 div.diy-f-spot-inner div.widget-wrapper.free-text,
 	div.diy-f-spot.callout2 div.diy-f-spot-inner div.widget-wrapper.free-text {
 		width:90% !important;
+	}
+	div.diy-f-spot.callout1,
+	div.diy-f-spot.callout2 {
+		border-bottom: none;
 	}
 }
 @media screen and (max-width: 479px) {
@@ -1712,4 +1716,11 @@ div#close_map {
     color: #F2AD4C; /* ********** replace with theme color ********** */
     display: inline;
     padding: 0;
+}
+.Events_item,
+#Events_full_item,
+#FAQ_category_list,
+#jobs-module ul li.jobs-single-item {
+	margin-left: 15px;
+	margin-right: 15px;
 }
